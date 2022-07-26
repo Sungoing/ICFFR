@@ -1,4 +1,4 @@
-# NFW
+# ICFFR
 &emsp; This project is for the fair face recognition method IC-FFR and the NFW dataset for individual and national bias evaluation.
 
 ## Train
