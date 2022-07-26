@@ -1,0 +1,7 @@
+icffr:
+  ir34:
+    ba: './model/ba_34_icffr_nfw_checkpoint.pth'
+    gl: './model/gl_34_icffr_checkpoint.pth'
+  ir50:
+    ba: './model/ba_50_icffr_checkpoint.pth'
+    gl: './model/gl_50_icffr_checkpoint.pth'

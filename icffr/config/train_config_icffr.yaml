@@ -1,0 +1,75 @@
+SEED: 1337 # random seed for reproduce results
+INDEX_ROOT: '/data/tf_data/balancedface'
+DATA_ROOT: '/data/tf_data/' # the parent root where your train/val/test data are stored
+
+DATASETS:  # the dataset index name
+
+    - name: TFR-RFW_EqualizedFace_112_with_race_label
+    # - name: TFR-GlobalFace-With-Race
+    
+      batch_size: 128
+      repeat_sample: true
+      weight: 1.
+      cctpr_base_margin: 0.35
+      cifp_base_margin: 0.30
+      class_sample_num: 8
+      cctpr_ratio: 0.5
+      cifp_ratio: 0.5
+      mask_mis_class: false
+      margin_sample: true
+      lower_begin: 0
+      lower_end: 4
+      dynamic_ratio: false
+      keep_beta_scale: false
+      dynamic_lower: 0.1
+      dynamic_upper: 1.0
+      balance_sample_times: false
+      reverse_target_margin: false
+      threshold_source: '1e-05' # available [None, '0.0001', 1e-05, 'batch_pair']
+      margin_source: 'sample_pair_average' # ['fn_average', 'sample_pair_average']
+      positive_center: 'batch_tp_mean' # ['batch_all_mean', 'batch_tp_mean', 1]
+
+BACKBONE_RESUME: ""
+HEAD_RESUME: ""
+
+BACKBONE_RESUME: ""
+HEAD_RESUME: ""
+
+META_RESUME: ""
+
+BACKBONE_NAME: 'IR_34'
+DIST_FC: false
+MODEL_ROOT: './ckpt/' # the root to buffer your checkpoints
+LOG_ROOT: './tensorboard' # the root to log your train/val status
+HEAD_NAME: "ICFFR"
+LOSS_NAME: 'Softmax' # support: ['DistCrossEntropy', 'Softmax']
+RGB_MEAN: [0.5, 0.5, 0.5] # for normalize inputs to [-1, 1]
+RGB_STD: [0.5, 0.5, 0.5]
+INPUT_SIZE: [112, 112]
+EMBEDDING_SIZE: 512 # feature dimension
+LR: 0.1 # initial LR
+START_EPOCH: 0 #start epoch
+WARMUP_STEP: -1
+NUM_EPOCH: 65 # total epoch number
+WEIGHT_DECAY: 0.0005 # do not apply to batch_norm parameters
+MOMENTUM: 0.9
+STAGES: [30, 45, 55] # epoch stages to decay learning rate
+FAR: 0.0001
+MARGIN_ONLY_LOW: true
+WITH_CIFP: true
+USE_POPULATION_STAT: false
+POPULATION_EPOCH: 1
+
+ROTATION: 'None'
+RECORD_TPR_LOGIT: false
+RECORD_CCTPR_MARGIN: false
+RECORD_CIFP_MARGIN: false
+RECORD_MINK_POS: false
+RECORD_TPR: false
+RECORD_STD: false
+
+LOCAL_RANK: 0
+DIST_BACKEND: 'nccl'
+DIST_URL: 'env://'
+NUM_WORKERS: 8
+AMP: false # fp16 for backbone
