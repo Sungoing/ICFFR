@@ -14,7 +14,7 @@
 ## Test
 
 ## Data Preparation
-&emsp; Download the images of our NFW from [BaiduDrive](https://pan.baidu.com/s/1vFQ6SLrYNIAK9R1JJyqGzw) with the extraction code "cvpr" or [GoogleDrive](https://drive.google.com/drive/folders/13bMbZEUcap0yNPJo57I1clKptwyD6ELK?usp=sharing), and put the whole images directory into ./data/
+&emsp; Download the images of our NFW from [GoogleDrive](https://drive.google.com/drive/folders/13bMbZEUcap0yNPJo57I1clKptwyD6ELK?usp=sharing), and put the whole images directory into ./data/
 
 &emsp; cd ./data/
 
@@ -27,7 +27,7 @@
 &emsp; unzip images.zip
 
 ## Model Preparation
-&emsp; Download the pretrained model of our IC-FFR from [BaiduDrive](https://pan.baidu.com/s/1CWRYtMplxXwOgMz95I9AHg) with the extraction code "cvpr" or [GoogleDrive](https://drive.google.com/drive/folders/1C-Jz0eYm4bwpPhP-EzQXazIwnNZvIf7e?usp=sharing), and put all the .pth files into ./model
+&emsp; Download the pretrained model of our IC-FFR from [GoogleDrive](https://drive.google.com/drive/folders/1C-Jz0eYm4bwpPhP-EzQXazIwnNZvIf7e?usp=sharing), and put all the .pth files into ./model
 
 ## Individual Bias Evaluation
 &emsp; Run the script of eval_individual.py, and the result will be saved in ./results directory in a .csv file.
