@@ -32,14 +32,16 @@
 ## Individual Bias Evaluation
 &emsp; Run the script of eval_individual.py, and the result will be saved in ./results directory in a .csv file.
 
-&emsp; Example of the individual bias:
+&emsp; Here are the individual TPR and FPR bias at different global FPRs:
 
-&emsp; ![balance_ir34_individual_tpr](https://github.com/Sungoing/ICFFR/blob/main/results/ba_34_individual_tpr.png)
+&emsp; ![individual_tpr_bias](https://github.com/Sungoing/ICFFR/blob/main/results/individual_tpr_bias.png)
+
+&emsp; ![individual_fpr_bias](https://github.com/Sungoing/ICFFR/blob/main/results/individual_fpr_bias.png)
 
 ## National Bias Evaluation
 &emsp; Run the script of eval_national.py, and the result will be saved in ./results directory in a .csv file.
 
-&emsp; Example of the national bias:
+&emsp; Here is the national bias by IR34 network trained on BalancedFace dataset:
 
-&emsp; ![balance_ir34_national](https://github.com/Sungoing/ICFFR/blob/main/results/ba_34_national.png)
+&emsp; ![national_bias](https://github.com/Sungoing/ICFFR/blob/main/results/national_bias.png)
 
